@@ -1,0 +1,8 @@
+---
+# These are defaults of role1
+
+# we want to override this var in role2
+role2_var: role1
+
+# this only exists in role1 and should get passed to role2 automatically
+random_var: role1

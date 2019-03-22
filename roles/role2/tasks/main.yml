@@ -1,0 +1,8 @@
+---
+- name: Print Variables
+  debug:
+    msg: "{{ item }}"
+  loop:
+    - role2_var
+    - role2_var2
+    - random_var

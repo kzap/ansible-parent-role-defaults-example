@@ -5,11 +5,11 @@
   tasks:
     - name: Include Role 1
       include_role: 
-        name: role1
+        name: role1-failing
         
 - name: Working Example
   hosts: all
   tasks:
     - name: Include Role 1
       include_role: 
-        name: role1
+        name: role1-working
