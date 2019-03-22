@@ -8,4 +8,3 @@
     name: role2
   vars:
     role2_var: "{{ role2_var }}"
-  ignore_errors: true

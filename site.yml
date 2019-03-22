@@ -1,14 +1,14 @@
 ---
 # This playbook shows how a parent role's defaults can override the default variables of a child role
 - name: Failing Example
-  hosts: all
+  hosts: localhost
   tasks:
     - name: Include Role 1
       include_role: 
         name: role1-failing
         
 - name: Working Example
-  hosts: all
+  hosts: localhost
   tasks:
     - name: Include Role 1
       include_role: 
