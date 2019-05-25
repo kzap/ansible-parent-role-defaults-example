@@ -1,0 +1,10 @@
+---
+- name: Include the wrapped child-role. This WILL NOT override the defaults of the child role.
+  include_role: 
+    name: child-role
+
+- name: Include the wrapped child-role, specify vars to pass. This will fail due to using the same var name.
+  include_role: 
+    name: child-role
+  vars:
+    child_role_var: "{{ child_role_var }}"

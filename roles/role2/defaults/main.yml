@@ -1,4 +1,0 @@
----
-# These are defaults of role2 and we want to override these if the parent role has these vars
-role2_var: role2
-role2_var2: role2

@@ -1,0 +1,4 @@
+---
+# These are defaults of role2 and we want to override these if the parent role has these vars
+child_role_var: "this var comes from the child-role defaults/main.yml"
+child_role_var2: "this var comes from the child-role defaults/main.yml"

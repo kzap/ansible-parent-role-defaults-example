@@ -1,0 +1,9 @@
+---
+- name: Child Role will print the variables it has received
+  debug:
+    msg: "{{ item }} = {{ lookup('vars', item) }}"
+  loop:
+    - child_role_var
+    - child_role_var2
+    - parent_role_var
+  ignore_errors: true

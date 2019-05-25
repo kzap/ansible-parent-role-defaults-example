@@ -1,0 +1,8 @@
+---
+# These are defaults of parent-role
+
+# we want to override this var in child-role
+child_role_var: "this var comes from the parent-role defaults/main.yml"
+
+# this only exists in parent-role and should get passed to child-role automatically
+parent_role_var: "this var comes from the parent-role defaults/main.yml"
