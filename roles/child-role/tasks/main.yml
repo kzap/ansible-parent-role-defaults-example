@@ -7,3 +7,23 @@
     - child_role_var2
     - parent_role_var
   ignore_errors: true
+
+- name: Child Role will check which variable are NOT empty
+  debug:
+    msg: "{{ item }} is NOT an empty var"
+  when: lookup('vars', item) | length > 0
+  loop:
+    - child_role_var
+    - child_role_var2
+    - parent_role_var
+  ignore_errors: true
+
+- name: Child Role will check which variable are empty
+  debug:
+    msg: "{{ item }} is an empty var"
+  when: not lookup('vars', item)
+  loop:
+    - child_role_var
+    - child_role_var2
+    - parent_role_var
+  ignore_errors: true

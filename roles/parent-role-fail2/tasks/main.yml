@@ -12,5 +12,5 @@
   include_role: 
     name: child-role
   vars:
-    child_role_var: "{{ child_role.child_role_var }}"
-    child_role_var2: "{{ child_role.child_role_var2 | default('parent-role did not specify a value for child_role_var2') }}"
+    child_role_var: "{{ child_role.child_role_var | default(omit) }}"
+    child_role_var2: "{{ child_role.child_role_var2 | default(None) }}"
