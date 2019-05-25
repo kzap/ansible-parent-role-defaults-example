@@ -6,17 +6,11 @@
   when: lookup('vars', item, default='UNDEFINED_VARIABLE') != 'UNDEFINED_VARIABLE'
   loop:
     - child_role_var
+    - child_role_var2
 
-- name: Include child-role. This WILL override the defaults of child-role
+- name: "Include child-role. If you never specify a value for child_role_var2, it will not use the defaults of child-role/defaults/main.yml since you passed it via the 'vars:' statement"
   include_role: 
     name: child-role
   vars:
     child_role_var: "{{ child_role.child_role_var | default(omit) }}"
-
-# You could just prefix all your role1 defaults like parent_child_role_var
-# But I prefer to keep the var names the same across parent and child roles
-- name: Include child-role but use a prefixed parent_role variable
-  include_role: 
-    name: child-role
-  vars:
-    child_role_var: "{{ parent_child_role_var | default(omit) }}"
+    child_role_var2: "{{ child_role.child_role_var2 | default(omit) }}"

@@ -6,6 +6,10 @@
     - name: "Include Failing Parent Role #1"
       include_role: 
         name: parent-role-fail1
+
+    - name: "Include Failing Parent Role #2"
+      include_role: 
+        name: parent-role-fail2
         
 - name: Working Examples
   hosts: localhost
