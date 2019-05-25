@@ -11,7 +11,7 @@
   include_role: 
     name: child-role
   vars:
-    child_role_var: "{{ child_role.child_role_var | default(omit) }}"
+    child_role_var: "{{ child_role.child_role_var }}"
 
 # You could just prefix all your role1 defaults like parent_child_role_var
 # But I prefer to keep the var names the same across parent and child roles
@@ -19,4 +19,4 @@
   include_role: 
     name: child-role
   vars:
-    child_role_var: "{{ parent_child_role_var | default(omit) }}"
+    child_role_var: "{{ parent_child_role_var }}"
